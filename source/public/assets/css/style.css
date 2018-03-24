@@ -19,3 +19,8 @@
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+
+.btn-primary { 
+    background-color: #009ece;
+    border-color: #009ece;
+}
