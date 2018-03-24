@@ -4,7 +4,7 @@ class Member {
         this.name = data.name;
         this.country = data.country;
         this.university = data.university;
-        this.image = data.image;
+        this.image = data.image.path;
     }
 
     university() {

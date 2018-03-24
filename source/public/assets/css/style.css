@@ -11,6 +11,10 @@
     font-size: 1.2rem;
 }
 
+.member-image {
+    border-radius: 50% !important;
+}
+
 #editor-in-chief {
     margin-bottom: 2rem;
 }
