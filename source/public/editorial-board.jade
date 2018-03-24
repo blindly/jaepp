@@ -6,11 +6,15 @@ hr.my-4
 
 h4.display-7 Editor-in-Chief
 div#editor-in-chief
-  .member
-    .member-name
-      h5 Robert William McGee
-    .member-affiliation
-      h6 Fayetteville State University, United States of America
+    .row
+        .member.col-7
+            .member-name
+              h5 Robert William McGee
+            .member-affiliation
+              h6 Fayetteville State University, United States of America
+        .image.col-5
+            .float-right
+                img.member-image(src="http://directus.fivecat.xyz/storage/uploads/00000000003.jpg")
 
 hr.my-4
 
@@ -19,12 +23,20 @@ h4.display-7 International Editorial Board
 div#editorialBoard
 
 script#editorial-board(type='text/x-jquery-tmpl').
-  <div class="member">
-    <div class="member-name">
-      <h5>${ name }</h5>
-    </div>
-    <div class="member-affiliation">
-      <h6>${ university }, ${ country }</h6>
+    <div class="row">
+        <div class="member col-7">
+            <div class="member-name">
+              <h5>${ name }</h5>
+            </div>
+            <div class="member-affiliation">
+              <h6>${ university }, ${ country }</h6>
+            </div>
+        </div>
+        <div class="image col-5">
+            <div class="float-right">
+                <img class="member-image" src="${ image }">
+            </div>
+        </div>
     </div>
 
 script.
