@@ -1,24 +1,41 @@
-<hr class="my-4">
+hr.my-4
 
-<h4 class="display-7">Editorial Board</h4>
+h3.display-7 Editorial Board
 
-ul
-  li Jaan Alver, Tallinn University of Technology, Estonia
-  li Lehte Alver, Tallinn University of Technology, Estonia
-  li Yuhua An, University of International Business and Economics, China
-  li Susana N. Vittadini Andres, Universidad de Buenos Aires, Argentina
-  li Meliha Basić, University of Sarajevo, Bosnia & Herzegovina
-  li Serkan Benk, Inonu University, Turkey
-  li Bella Butler, Curtin University of Technology, Australia
-  li Ravi K. Jain, Dhruva College of Management, Hyderabad, India
-  li Bouchra M’Zali, University of Quebec at Montreal, Canada
-  li Tatyana Maranjyan, Moscow State University of Economics, Statistics and Informatics, Yerevan Branch, Armenia
-  li Iryna Nasadiuk, Odessa National University, Ukraine
-  li Rodney Oglesby, Drury University, USA
-  li Silvia López Paláu, University of Puerto Rico
-  li Yanira Petrides, Instituto Tecnológica Autónoma de México
-  li Galina G. Preobragenskaya, Abu Dhabi University, UAE
-  li Helen M. Roybark, Radford University, USA
-  li Željko Šević, Glasgow Caledonian University, UK
-  li Orapan Yolrabil, Thammasat University, Thailand
-  li Yeomin Yoon, Seton Hall University, USA
+hr.my-4
+
+h4.display-7 Editor-in-Chief
+div#editor-in-chief
+  .member
+    .member-name
+      h5 Robert William McGee
+    .member-affiliation
+      h6 Fayetteville State University, United States of America
+
+hr.my-4
+
+h4.display-7 International Editorial Board
+
+div#editorialBoard
+
+script#editorial-board(type='text/x-jquery-tmpl').
+  <div class="member">
+    <div class="member-name">
+      <h5>${ name }</h5>
+    </div>
+    <div class="member-affiliation">
+      <h6>${ university }, ${ country }</h6>
+    </div>
+
+script.
+  
+  var url = "http://tmp.fivecat.xyz/api/collections/get/editorial_board";
+  var editorialBoard = $.getApiData(url);
+
+  console.log(editorialBoard);
+
+  editorialBoard.forEach( function(data) {
+    var member = new Member( data );
+    $.tmpl( $('#editorial-board'), member).appendTo('#editorialBoard');
+  });
+  
