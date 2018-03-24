@@ -1,0 +1,39 @@
+hr.my-4
+
+h3.display-7 Editorial Board
+
+hr.my-4
+
+h4.display-7 Editor-in-Chief
+div#editor-in-chief
+  .member
+    .member-name
+      h5 Robert William McGee
+    .member-affiliation
+      h6 Fayetteville State University, United States of America
+
+hr.my-4
+
+h4.display-7 International Editorial Board
+
+div#editorialBoard
+
+script#editorial-board(type='text/x-jquery-tmpl').
+  <div class="member">
+    <div class="member-name">
+      <h5>${ name }</h5>
+    </div>
+    <div class="member-affiliation">
+      <h6>${ university }, ${ country }</h6>
+    </div>
+
+script.
+  
+  var url = "http://tmp.fivecat.xyz/api/collections/get/editorial_board";
+  var editorialBoard = $.getApiData(url);
+
+  editorialBoard.forEach( function(data) {
+    var member = new Member( data );
+    $.tmpl( $('#editorial-board'), member).appendTo('#editorialBoard');
+  });
+  
