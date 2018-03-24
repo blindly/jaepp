@@ -1,0 +1,4 @@
+[build]
+  base = "source"
+  public = "public"
+  command = "harp compile source public"

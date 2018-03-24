@@ -1,0 +1,25 @@
+.member {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.member-name {
+    font-size: 1.25rem;
+}
+
+.member-afiliation {
+    font-size: 1.2rem;
+}
+
+.member-image {
+    border-radius: 50% !important;
+}
+
+#editor-in-chief {
+    margin-bottom: 2rem;
+}
+
+#editorial-board {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
