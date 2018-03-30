@@ -1,54 +1,31 @@
-hr.my-4
+section
 
-h3.display-7 Editorial Board
+  header.major
+    h2 Editorial Board
 
-hr.my-4
+  header.major
+    h3 Chief Editor
 
-h4.display-7 Editor-in-Chief
-div#editor-in-chief
-    .row
-        .member.col-7
-            .member-name
-              h5 Robert William McGee
-            .member-affiliation
-              h6 Fayetteville State University, United States of America
-        .image.col-5
-            .pull-right
-                img.member-image(src="https://directus.fivecat.xyz/storage/uploads/00000000003.jpg")
+  div.posts#editor
+    article
+      h4 Robert William McGee
+      p Fayetteville State University, United States of America
 
-hr.my-4
+  header.major
+    h3 International Board of Editors
+  div.posts#editorialBoard
 
-h4.display-7 International Editorial Board
-
-div#editorialBoard
-
-script#editorial-board(type='text/x-jquery-tmpl').
-    <div class="row">
-        <div class="member col-7">
-            <div class="member-name">
-              <h5>${ name }</h5>
-            </div>
-            <div class="member-affiliation">
-              <h6>${ university }, ${ country }</h6>
-            </div>
-        </div>
-        <div class="image col-5">
-            <div class="pull-right">
-                <img class="member-image" src="${ image }">
-            </div>
-        </div>
-    </div>
+script#members(type='text/x-jquery-tmpl').
+    <article>
+      <h4>${ name }</h4>
+      <p>${ university }, ${ country }</p>
+    </article>
 
 script.
-  
-  var url = "https://tmp.fivecat.xyz/api/collections/get/editorial_board";
+  var url = "https://jaepp.borke.site/api/collections/get/editorial_board";
   var editorialBoard = $.getApiData(url);
 
   editorialBoard.forEach( function(data) {
     var member = new Member( data );
-    
-    console.log( member );
-    
-    $.tmpl( $('#editorial-board'), member).appendTo('#editorialBoard');
+    $.tmpl( $('#members'), member).appendTo('#editorialBoard');
   });
-  

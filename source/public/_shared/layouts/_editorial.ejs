@@ -8,7 +8,7 @@
 
 <head>
   <title>
-    Journal of Accounting, Ethics &amp; Public Policy
+    <%= title %>
   </title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -47,11 +47,11 @@
 
         <!-- Header -->
         <header id="header">
-          <a href="index.html" class="logo"><strong>Journal of Accounting, Ethics &amp; Public Policy</strong></a>
+          <a href="index.html" class="logo"><strong><%= title %></strong></a>
         </header>
 
         <section>
-          <section id="banner"><div class="content"><header><h1>Journal of Accounting, Ethics &amp; Public Policy</h1></header><p>The Journal of Accounting, Ethics & Public Policy publishes research papers focusing on the intersection between accounting, ethics, and public policy. Preference is given to papers illuminating through theorical or empirical analysis, the effects of accouting on public policy and vice-versa.</p><p>We specialize in publishing high quality scholarly articles in the overlapping interdisciplinary areas of accounting, ethics and public policy.</p><ul class="actions"><li><a href="/guide" class="button big">Learn More</a></li></ul></div><span class="image object"><img src="/images/architecture-buildings-campus-220351.jpg" alt=""></span></section>
+          <%- yield %>
         </section>
 
       </div>

@@ -1,3 +1,5 @@
 {
-  "domains": ["jaepp.org"]
+  "globals": {
+    "title": "Journal of Accounting, Ethics & Public Policy"
+  }
 }

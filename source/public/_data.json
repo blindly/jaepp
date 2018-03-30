@@ -1,14 +1,20 @@
 {
   "index": {
-    "layout": "_shared/layouts/_layout.ejs"
+    "layout": "_shared/layouts/_editorial.ejs"
   },
   "404": {
-    "layout": "_shared/layouts/_layout.ejs"
+    "layout": "_shared/layouts/_editorial.ejs"
   },
   "editorial-board": {
-    "layout": "_shared/layouts/_layout.ejs"
+    "layout": "_shared/layouts/_editorial.ejs"
   },
   "guide": {
-    "layout": "_shared/layouts/_layout.ejs"
+    "layout": "_shared/layouts/_editorial.ejs"
+  },
+  "featured": {
+    "layout": "_shared/layouts/_editorial.ejs"
+  },
+  "contact": {
+    "layout": "_shared/layouts/_editorial.ejs"
   }
 }

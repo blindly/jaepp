@@ -51,7 +51,43 @@
         </header>
 
         <section>
-          <section id="banner"><div class="content"><header><h1>Journal of Accounting, Ethics &amp; Public Policy</h1></header><p>The Journal of Accounting, Ethics & Public Policy publishes research papers focusing on the intersection between accounting, ethics, and public policy. Preference is given to papers illuminating through theorical or empirical analysis, the effects of accouting on public policy and vice-versa.</p><p>We specialize in publishing high quality scholarly articles in the overlapping interdisciplinary areas of accounting, ethics and public policy.</p><ul class="actions"><li><a href="/guide" class="button big">Learn More</a></li></ul></div><span class="image object"><img src="/images/architecture-buildings-campus-220351.jpg" alt=""></span></section>
+          <section><header class="major"><h2>Contact Us</h2></header><div class="content"><form id="form" class="form"><div class="form-group row"><label for="name" class="col-4 col-form-label">Name</label><div class="col-8"><div class="input-group"><div class="input-group-addon"><i class="fa fa-address-book"></i></div><input id="name" name="name" type="text" required="required" class="form-control here"></div></div></div><div class="form-group row"><label for="email" class="col-4 col-form-label">Email</label><div class="col-8"><input id="email" name="email" type="text" required="required" class="form-control here"></div></div><div class="form-group row"><label for="organization" class="col-4 col-form-label">Organization</label><div class="col-8"><input id="organization" name="organization" type="text" required="required" class="form-control here"></div></div><div class="form-group row"><label for="message" class="col-4 col-form-label">Message</label><div class="col-8"><textarea id="message" name="message" cols="40" rows="5" required="required" class="form-control"></textarea></div></div><div class="form-group row"><div class="offset-4 col-8"><button name="submit" type="submit" class="btn">Send Message</button></div></div></form></div></section><script>var url = "https://jaepp.borke.site/api/forms/submit/contact?token=171b80d71686d3b5b33dc42c3eff88";
+
+$(document).on("submit", "form", function(e) {
+  e.preventDefault();
+  var name = $("#name").val();
+  var email = $("#email").val();
+  var organization = $("#organization").val();
+  var message = $("#message").val();
+
+  if (
+    name != "" &&
+    message !== ""
+  ) {
+    var data = {
+      name: name,
+      email: email,
+      organization: organization,
+      message: message,
+    };
+
+    var body = { form: data };
+
+    $.ajax({
+      url: url,
+      type: "POST",
+      contentType: "application/json",
+      data: JSON.stringify(body),
+      success: function(json) {
+        swal("Thank you for your interest!");
+      }
+    });
+
+    document.getElementById("form").reset();
+  } else {
+    return;
+  }
+});</script>
         </section>
 
       </div>
