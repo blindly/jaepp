@@ -16,5 +16,11 @@
   },
   "contact": {
     "layout": "_shared/layouts/_editorial.ejs"
+  },
+  "submissions": {
+    "layout": "_shared/layouts/_editorial.ejs"
+  },
+  "next": {
+    "layout": "_shared/layouts/_editorial.ejs"
   }
 }
