@@ -16,12 +16,14 @@ script#papers(type='text/x-jquery-tmpl').
     </article>
 
 script.
-  var url = "https://jaepp.borke.site/api/collections/get/featured";
-  var papers = $.getApiData(url);
-  
-  console.log( papers );
-
-  papers.forEach( function(data) {
-    var paper = new Paper( data );
-    $.tmpl( $('#papers'), paper).appendTo('#posts');
+  fetch('https://jaepp.borke.site/api/collections/get/featured')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    var papers = myJson.entries;
+    papers.forEach( function(data) {
+      var paper = new Paper( data );
+      $.tmpl( $('#papers'), paper).appendTo('#posts');
+    });
   });

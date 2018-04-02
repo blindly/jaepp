@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>
+    Journal of Accounting, Ethics &amp; Public Policy
+  </title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="shortcut icon" type="image/png" href="/images/cap.png"/>
+  <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+  
+  <meta name="google-site-verification" content="JQsZwR3jGci6n04PTxFvbTDEwoiiNCd0EwzlnZDzcNw" />
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery-3.3.1.min.js" ></script>
+  <script src="assets/js/jquery.tmpl.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+  <script src="app/functions.js" ></script>
+  <script src="app/member.js" ></script>
+  <script src="app/paper.js" ></script>
+
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+
+  <!-- Wrapper -->
+  <div id="wrapper">
+
+    <!-- Main -->
+    <div id="main">
+      <div class="inner">
+
+        <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="logo"><strong>Journal of Accounting, Ethics &amp; Public Policy</strong></a>
+        </header>
+
+        <section>
+          <section><header class="major"><h2>Guide for Authors</h2></header><div id="guide" class="content"></div></section><script>fetch('https://jaepp.borke.site/api/collections/get/guide')
+.then(function(response) {
+  return response.json();
+})
+.then(function(myJson) {
+  $( "#guide" ).append( myJson.entries[0].guide );
+});</script>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+      <div class="inner">
+        
+        <img class="img-fluid" src="/images/cap.png">
+
+        <!-- Menu -->
+        <nav id="menu">
+          <header class="major">
+            <h2>Menu</h2>
+          </header>
+          <ul>
+            <li>
+              <a href="/">Homepage</a>
+            </li>
+            <li>
+              <a href="/featured">Featured Articles</a>
+            </li>
+            <li>
+              <a href="/editorial-board">Editorial Board</a>
+            </li>
+            <li>
+              <a href="/guide">Guide for Authors</a>
+            </li>
+            <li>
+              <a href="/submissions">Submit a Paper</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Footer -->
+        <footer id="footer">
+          <p class="copyright">&copy; JAEPP. All rights reserved</p>
+        </footer>
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+</html>
