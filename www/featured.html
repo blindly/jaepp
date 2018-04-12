@@ -55,14 +55,16 @@
     <li><a href="${ href }" class="button">More</a></li>
   </ul>
 </article>
-</script><script>var url = "https://jaepp.borke.site/api/collections/get/featured";
-var papers = $.getApiData(url);
-
-console.log( papers );
-
-papers.forEach( function(data) {
-  var paper = new Paper( data );
-  $.tmpl( $('#papers'), paper).appendTo('#posts');
+</script><script>fetch('https://jaepp.borke.site/api/collections/get/featured')
+.then(function(response) {
+  return response.json();
+})
+.then(function(myJson) {
+  var papers = myJson.entries;
+  papers.forEach( function(data) {
+    var paper = new Paper( data );
+    $.tmpl( $('#papers'), paper).appendTo('#posts');
+  });
 });</script>
         </section>
 

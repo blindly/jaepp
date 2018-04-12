@@ -52,12 +52,16 @@
   <h4>${ name }</h4>
   <p>${ university }, ${ country }</p>
 </article>
-</script><script>var url = "https://jaepp.borke.site/api/collections/get/editorial_board";
-var editorialBoard = $.getApiData(url);
-
-editorialBoard.forEach( function(data) {
-  var member = new Member( data );
-  $.tmpl( $('#members'), member).appendTo('#editorialBoard');
+</script><script>fetch('https://jaepp.borke.site/api/collections/get/editorial_board')
+.then(function(response) {
+  return response.json();
+})
+.then(function(myJson) {
+  var editorialBoard = myJson.entries;
+  editorialBoard.forEach( function(data) {
+    var member = new Member( data );
+    $.tmpl( $('#members'), member).appendTo('#editorialBoard');
+  });
 });</script>
         </section>
 

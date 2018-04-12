@@ -48,9 +48,13 @@
         </header>
 
         <section>
-          <section><header class="major"><h2>Guide for Authors</h2></header><div id="guide" class="content"></div></section><script>var url = "https://jaepp.borke.site/api/collections/get/guide";
-var data = $.getApiData(url);  
-$( "#guide" ).append( data[0].guide );</script>
+          <section><header class="major"><h2>Guide for Authors</h2></header><div id="guide" class="content"></div></section><script>fetch('https://jaepp.borke.site/api/collections/get/guide')
+.then(function(response) {
+  return response.json();
+})
+.then(function(myJson) {
+  $( "#guide" ).append( myJson.entries[0].guide );
+});</script>
         </section>
 
       </div>
