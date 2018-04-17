@@ -16,16 +16,20 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
   <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-  
-  <meta name="google-site-verification" content="JQsZwR3jGci6n04PTxFvbTDEwoiiNCd0EwzlnZDzcNw" />
 
   <!-- Scripts -->
   <script src="assets/js/jquery-3.3.1.min.js" ></script>
   <script src="assets/js/jquery.tmpl.js" ></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-sweetalert/1.0.1/sweetalert.min.js"></script>
+  <script src="app/header.js" ></script>
   <script src="app/functions.js" ></script>
   <script src="app/member.js" ></script>
   <script src="app/paper.js" ></script>
+
+  <script>
+    let header = new Header();
+    header.render();
+  </script>
 
   <script src="assets/js/skel.min.js"></script>
   <script src="assets/js/util.js"></script>
