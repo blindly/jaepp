@@ -22,5 +22,8 @@
   },
   "next": {
     "layout": "_shared/layouts/_editorial.ejs"
+  },
+  "privacy": {
+    "layout": "_shared/layouts/_editorial.ejs"
   }
 }
